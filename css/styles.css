@@ -11,7 +11,7 @@
   cursor: pointer; }
 
 body {
-  padding: 50px 0 0 0;
+  padding: 40px 0 40px 0;
   z-index: 0; }
 
 table {
@@ -32,13 +32,18 @@ div .gallery {
 div .desc {
   padding: 15px;
   color: #fff;
-  background-color: #242121;
+  background-color: #202020;
   text-align: center; }
 
 .clearfix:after {
   content: "";
   display: table;
   clear: both; }
+
+.footer {
+  background-color: #242121;
+  margin: 0 auto;
+  padding: 10px 0px; }
 
 @media only screen and (max-width: 700px) {
   .responsive {

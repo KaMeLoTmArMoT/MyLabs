@@ -1,4 +1,5 @@
 $bg-col: #242121;
+$bg-foot: #202020;
 $light: #fff;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -21,7 +22,7 @@ $light: #fff;
 }
 
 body {
-  padding:50px 0 0 0;
+  padding:40px 0 40px 0;
   z-index:0;
 }
 
@@ -51,7 +52,7 @@ div {
   .desc {
     padding: 15px;
     color: $light;
-    background-color: $bg-col;
+    background-color: $bg-foot;
     text-align: center;
   }
 }
@@ -60,6 +61,11 @@ div {
   content: "";
   display: table;
   clear: both;
+}
+
+.footer{
+  background-color: $bg-col;
+  @include zero-margin(10px, 0px);
 }
 
 @media only screen and (max-width: 700px) {
