@@ -43,7 +43,10 @@ div .desc {
 .footer {
   background-color: #242121;
   margin: 0 auto;
-  padding: 10px 0px; }
+  padding: 10px 0px;
+  position: absolute;
+  left: 0;
+  right: 0; }
 
 @media only screen and (max-width: 700px) {
   .responsive {
