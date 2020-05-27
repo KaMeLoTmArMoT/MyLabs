@@ -1,3 +1,4 @@
+/*eslint-env jquery*/
 $(document).ready(function () {
     $('#login-button').click(function () {
         $('#loginModal').modal('toggle');
