@@ -16,7 +16,7 @@
     <title>Title</title>
 </head>
 
-<body>
+<body onload="loadData('album', '0', 'name0'); loadData('album', '1', 'name1'); loadData('album', '2', 'name2'); loadData('album', '3', 'name3')">
     <!-- ------------------------------ Nav-bar ------------------------------ -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <a class="navbar-brand" href="index.html">MyTopMusic</a>
@@ -153,7 +153,7 @@
                         <a href="playlist-info.html">
                             <img src="img/songs/song-1.jpg" alt="s1" width="600" height="400">
                         </a>
-                        <div class="desc">T-Fest молодость.</div>
+                        <div class="desc" id="name0">...</div>
                     </div>
                 </div>
 
@@ -162,7 +162,7 @@
                         <a href="playlist-info.html">
                             <img src="img/songs/song-2.jpg" alt="s2" width="600" height="400">
                         </a>
-                        <div class="desc">Some name should be here.</div>
+                        <div class="desc" id="name1">...</div>
                     </div>
                 </div>
 
@@ -171,7 +171,7 @@
                         <a href="playlist-info.html">
                             <img src="img/songs/song-3.jpg" alt="s3" width="600" height="400">
                         </a>
-                        <div class="desc">Казка - Плакала та інші.</div>
+                        <div class="desc" id="name2">...</div>
                     </div>
                 </div>
 
@@ -180,7 +180,7 @@
                         <a href="playlist-info.html">
                             <img src="img/songs/song-4.jpg" alt="s4" width="600" height="400">
                         </a>
-                        <div class="desc">Макс Корж альбом.</div>
+                        <div class="desc" id="name3">...</div>
                     </div>
                 </div>
             </div>
@@ -291,5 +291,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="scripts/modals.js"></script>
+    <script src="scripts/getData.js"></script>
 </body>
 </html>
