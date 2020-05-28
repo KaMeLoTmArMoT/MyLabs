@@ -16,7 +16,7 @@
     <title>Title</title>
 </head>
 
-<body>
+<body onload="loadData('text', '0', 'text1')">
     <!-- ------------------------------ Nav-bar ------------------------------ -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <a class="navbar-brand" href="index.html">MyTopMusic</a>
@@ -201,7 +201,7 @@
                                     <img src="img/singers/singer-1.jpg" class="align-self-center mr-3 d-none d-md-block" alt="img" height="256" width="256">
                                     <div class="media-body align-self-center">
                                         <h5 class="mt-0 text-center">Time kill machine</h5>
-                                        <p>Freddie Mercury (born Farrokh Bulsara, 5th September 1946 - 24th November 1991) was a Zanzibari-born British singer of Indian descent, songwriter and record producer, known as the lead vocalist and songwriter of the British rock band Queen. He also became known for his flamboyant stage persona and four-octave vocal range. Before he became a singer he has been in 3 other bands (Ibex, Sour Milk Sea, and The Hectics). He died on November 24, 1991 from bronchopneumonia as a result from HIV/AIDS</p>
+                                        <p id="text1">No data yet</p>
                                     </div>
                                 </div>
                             </div>
@@ -300,6 +300,7 @@
         </div>
     </div>
 
+
     <!-- ------------------------------ Footer ------------------------------ -->
     <footer class="footer">
         <div class="container">
@@ -316,5 +317,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="scripts/modals.js"></script>
+    <script src="scripts/getData.js"></script>
 </body>
 </html>
