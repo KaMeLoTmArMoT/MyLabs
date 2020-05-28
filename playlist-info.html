@@ -15,7 +15,7 @@
 
     <title>Title</title>
 </head>
-<body>
+<body onload="loadData('songs', '0', 'song0');loadData('songs', '1', 'song1');loadData('songs', '2', 'song2');loadData('songs', '3', 'song3');loadData('songs', '4', 'song4');">
     <!-- ------------------------------ Nav-bar ------------------------------ -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <a class="navbar-brand" href="index.html">MyTopMusic</a>
@@ -175,8 +175,8 @@
                             <div class="col-2">
                                 1.
                             </div>
-                            <div class="col-7">
-                                First song
+                            <div class="col-7" id="song0">
+                                ...
                             </div>
                             <div class="col-1">
                                 <img src="img/play.png" alt="p" height="20" width="20">
@@ -194,8 +194,8 @@
                             <div class="col-2">
                                 2.
                             </div>
-                            <div class="col-7">
-                                Second song
+                            <div class="col-7" id="song1">
+                                ...
                             </div>
                             <div class="col-1">
                                 <img src="img/play.png" alt="p" height="20" width="20">
@@ -213,8 +213,8 @@
                             <div class="col-2">
                                 3.
                             </div>
-                            <div class="col-7">
-                                Third song
+                            <div class="col-7" id="song2">
+                                ...
                             </div>
                             <div class="col-1">
                                 <img src="img/play.png" alt="p" height="20" width="20">
@@ -232,8 +232,8 @@
                             <div class="col-2">
                                 4.
                             </div>
-                            <div class="col-7">
-                                Fourth song
+                            <div class="col-7" id="song3">
+                                ...
                             </div>
                             <div class="col-1">
                                 <img src="img/play.png" alt="p" height="20" width="20">
@@ -251,8 +251,8 @@
                             <div class="col-2">
                                 5.
                             </div>
-                            <div class="col-7">
-                                Fifth song
+                            <div class="col-7" id="song4">
+                                ...
                             </div>
                             <div class="col-1">
                                 <img src="img/play.png" alt="p" height="20" width="20">
@@ -304,5 +304,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="scripts/modals.js"></script>
+    <script src="scripts/getData.js"></script>
 </body>
 </html>
