@@ -14,6 +14,8 @@ import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { PlaylistsComponent } from './playlists/playlists.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HeaderComponent } from './header/header.component';
     EventsComponent,
     SpecialComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    PlaylistsComponent
   ],
   imports: [
     BrowserModule,

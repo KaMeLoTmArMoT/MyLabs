@@ -5,11 +5,13 @@ import { SpecialComponent } from "./special/special.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import {AuthGuard} from "./auth.guard";
+import {HomeComponent} from "./home/home.component";
+import {PlaylistsComponent} from "./playlists/playlists.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/events',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'playlists',
+    component: PlaylistsComponent
   }
 ];
 
