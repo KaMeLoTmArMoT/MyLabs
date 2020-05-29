@@ -2,58 +2,69 @@
 
 .row-content {
   margin: 0 auto;
-  padding: 50px 0px;
+  padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 100px; }
+  min-height: 100px;
+}
 
 .navbar {
-  background-color: #242121; }
+  background-color: #242121;
+}
 
 .nav-link, td, .card-header, .responsive {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 body {
-  padding: 40px 0 40px 0;
-  z-index: 0; }
+  padding: 40px 0 0 0;
+  z-index: 0;
+}
 
 table {
-  background-color: #242121; }
+  background-color: #242121;
+}
 
 .responsive {
   padding: 0 6px;
   float: left;
-  width: 24.99999%; }
+  width: 24.99999%;
+}
 
 div .gallery {
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+}
+
 div .gallery:hover {
-  border: 1px solid #777; }
+  border: 1px solid #777;
+}
+
 div .gallery img {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
+
 div .desc {
   padding: 15px;
   color: #fff;
   background-color: #202020;
-  text-align: center; }
+  text-align: center;
+}
 
 .clearfix:after {
   content: "";
   display: table;
-  clear: both; }
-
-.footer {
-  background-color: #242121;
-  margin: 0 auto;
-  padding: 10px 0px;
-  position: absolute;
-  left: 0;
-  right: 0; }
+  clear: both;
+}
 
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
-    margin: 6px 0; } }
+    margin: 6px 0;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .responsive {
-    width: 100%; } }
+    width: 100%;
+  }
+}

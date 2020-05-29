@@ -12,10 +12,10 @@ import { AuthService } from "./services/auth.service";
 import { EventService } from "./services/event.service";
 import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
-import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PlaylistsComponent } from './playlists/playlists.component';
+import { PlaylistInfoComponent } from './playlist-info/playlist-info.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import { PlaylistsComponent } from './playlists/playlists.component';
     LoginComponent,
     EventsComponent,
     SpecialComponent,
-    FooterComponent,
     HeaderComponent,
     HomeComponent,
-    PlaylistsComponent
+    PlaylistsComponent,
+    PlaylistInfoComponent
   ],
   imports: [
     BrowserModule,
