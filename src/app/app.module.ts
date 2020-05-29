@@ -12,6 +12,8 @@ import { AuthService } from "./services/auth.service";
 import { EventService } from "./services/event.service";
 import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { TokenInterceptorService } from "./services/token-interceptor.service";
     RegisterComponent,
     LoginComponent,
     EventsComponent,
-    SpecialComponent
+    SpecialComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
