@@ -16,26 +16,15 @@
           </thead>
           <!-- --------------- Table Body --------------- -->
           <tbody>
-          <tr class='clickable-row'>
-            <th scope="row" class="d-none d-sm-block">1</th> <td>Dance</td> <td>Larry</td> <td>112,901.123</td>
-          </tr>
-          <tr class='clickable-row'>
-            <th scope="row" class="d-none d-sm-block">2</th> <td>Hit</td> <td>Griph</td> <td>33,123.199</td>
-          </tr>
-          <tr class='clickable-row'>
-            <th scope="row" class="d-none d-sm-block">3</th> <td>So so</td> <td>Goblin</td> <td>12,401.123</td>
-          </tr>
-          <tr class='clickable-row'>
-            <th scope="row" class="d-none d-sm-block">4</th> <td>Summertime</td> <td>Visa</td> <td>6,134.884</td>
-          </tr>
-          <tr class='clickable-row'>
-            <th scope="row" class="d-none d-sm-block">5</th> <td>Shake it</td> <td>Relig</td> <td>539.323</td>
+          <tr class='clickable-row' *ngFor="let song of songs">
+            <th scope="row" class="d-none d-sm-block">{{song.id}}</th> <td>{{song.name}}</td> <td>{{song.author}}</td> <td>{{song.listenings}}</td>
           </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
   <!-- -------------------- Top rated singers -------------------- -->
   <div class="row row-content">
     <div class="col-12">
@@ -49,17 +38,17 @@
           <div class="card-header" role="tab" id="head-1">
             <h3 class="mb-0">
               <a class="collapsed" data-toggle="collapse" data-target="#coll-1">
-                Freddie Mercury
+                {{singers[0].name}}
               </a>
             </h3>
           </div>
           <div class="collapse show" id="coll-1" data-parent="#accordion">
             <div class="card-body">
               <div class="media">
-                <img src="../../assets/img/singers/singer-1.jpg" class="align-self-center mr-3 d-none d-md-block" alt="img" height="256" width="256">
+                <img src="{{singers[0].image}}" class="align-self-center mr-3 d-none d-md-block" alt="img" height="256" width="256">
                 <div class="media-body align-self-center">
-                  <h5 class="mt-0 text-center">Time kill machine</h5>
-                  <p id="text1">No data yet</p>
+                  <h5 class="mt-0 text-center">{{singers[0].title}}</h5>
+                  <p id="text1">{{singers[0].text}}</p>
                 </div>
               </div>
             </div>

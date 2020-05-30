@@ -7,6 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistsComponent implements OnInit {
 
+  albums = [
+    {
+      name: "T-Fest молодость.",
+      img: "../../assets/img/songs/song-1.jpg",
+    },
+    {
+      name: "Some name should be here.",
+      img: "../../assets/img/songs/song-2.jpg",
+    },
+    {
+      name: "Казка - Плакала та інші.",
+      img: "../../assets/img/songs/song-3.jpg",
+    },
+    {
+      name: "Макс Корж альбом.",
+      img: "../../assets/img/songs/song-4.jpg",
+    },
+  ]
+
   constructor() { }
 
   ngOnInit() {

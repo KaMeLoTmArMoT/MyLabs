@@ -1,135 +1,63 @@
 <!-- ------------------------------ Home elements ------------------------------ -->
 <div class="container">
   <!-- -------------------- Songs -------------------- -->
+
+  <!-- ------------ Part 1 ------------ -->
   <div class="row row-content">
     <div class="col-12">
       <div class="col text-center">
         <h2>Your albums</h2>
       </div>
 
-      <div class="responsive">
+      <div class="responsive" *ngFor="let album of albums">
         <div class="gallery">
           <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-1.jpg" alt="s1" width="600" height="400">
+            <img src="{{album.img}}" alt="s1" width="600" height="400">
           </a>
-          <div class="desc" id="name0">...</div>
+          <div class="desc" id="name0">{{album.name}}</div>
         </div>
       </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-2.jpg" alt="s2" width="600" height="400">
-          </a>
-          <div class="desc" id="name1">...</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-3.jpg" alt="s3" width="600" height="400">
-          </a>
-          <div class="desc" id="name2">...</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-4.jpg" alt="s4" width="600" height="400">
-          </a>
-          <div class="desc" id="name3">...</div>
-        </div>
-      </div>
     </div>
     <div class="clearfix"></div>
   </div>
+
+  <!-- ------------ Part 2 ------------ -->
   <div class="row row-content">
     <div class="col-12">
       <div class="col text-center">
         <h2>Top-4 most listened albums</h2>
       </div>
 
-      <div class="responsive">
+      <div class="responsive" *ngFor="let album of albums">
         <div class="gallery">
           <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-1.jpg" alt="s1" width="600" height="400">
+            <img src="{{album.img}}" alt="s1" width="600" height="400">
           </a>
-          <div class="desc">T-Fest молодость.</div>
+          <div class="desc" id="name1">{{album.name}}</div>
         </div>
       </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-2.jpg" alt="s2" width="600" height="400">
-          </a>
-          <div class="desc">Some name should be here.</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-3.jpg" alt="s3" width="600" height="400">
-          </a>
-          <div class="desc">Казка - Плакала та інші.</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-4.jpg" alt="s4" width="600" height="400">
-          </a>
-          <div class="desc">Макс Корж альбом.</div>
-        </div>
-      </div>
     </div>
     <div class="clearfix"></div>
   </div>
+
+  <!-- ------------ Part 3 ------------ -->
   <div class="row row-content">
     <div class="col-12">
       <div class="col text-center">
         <h2>Top-4 newest albums</h2>
       </div>
 
-      <div class="responsive">
+      <div class="responsive" *ngFor="let album of albums">
         <div class="gallery">
           <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-1.jpg" alt="s1" width="600" height="400">
+            <img src="{{album.img}}" alt="s1" width="600" height="400">
           </a>
-          <div class="desc">T-Fest молодость.</div>
+          <div class="desc" id="name3">{{album.name}}</div>
         </div>
       </div>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-2.jpg" alt="s2" width="600" height="400">
-          </a>
-          <div class="desc">Some name should be here.</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-3.jpg" alt="s3" width="600" height="400">
-          </a>
-          <div class="desc">Казка - Плакала та інші.</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <a routerLink="/playlist-info">
-            <img src="../../assets/img/songs/song-4.jpg" alt="s4" width="600" height="400">
-          </a>
-          <div class="desc">Макс Корж альбом.</div>
-        </div>
-      </div>
     </div>
     <div class="clearfix"></div>
   </div>
