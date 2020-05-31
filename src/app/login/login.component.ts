@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   }
+
+  err: '';
+
   constructor(private _auth: AuthService,
               private _router: Router) { }
 
@@ -29,7 +32,11 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', res.token)
           this._router.navigate(['/special'])
         },
-        err => console.log(err)
+        err => {
+          console.log(err)
+          console.log(err.error)
+          this.err = err.error
+        }
       )
   }
 
