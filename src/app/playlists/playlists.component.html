@@ -11,7 +11,7 @@
 
       <div class="responsive" *ngFor="let album of albums">
         <div class="gallery">
-          <a routerLink="/playlist-info">
+          <a (click)="getAlbum(album.name)">
             <img src="{{album.img}}" alt="s1" width="600" height="400">
           </a>
           <div class="desc" id="name0">{{album.name}}</div>

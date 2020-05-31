@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistInfoComponent implements OnInit {
 
+  name = '';
+
   constructor() { }
 
   ngOnInit() {
+    this.name = localStorage.getItem('name');
+    localStorage.removeItem('name');
   }
 
 }
