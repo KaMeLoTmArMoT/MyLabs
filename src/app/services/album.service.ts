@@ -11,7 +11,7 @@ export class AlbumService {
   constructor(private http: HttpClient,) { }
 
   getAlbums() {
-    return this.http.get(this._getAlbumsUrl);
+    return this.http.get<any>(this._getAlbumsUrl);
   }
 
   postAlbum(album) {

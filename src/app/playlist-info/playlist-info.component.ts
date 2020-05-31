@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AlbumService} from "../services/album.service";
 
 @Component({
   selector: 'app-playlist-info',
@@ -9,11 +10,24 @@ export class PlaylistInfoComponent implements OnInit {
 
   name = '';
 
-  constructor() { }
+  album = {
+      name: '',
+      author: '',
+      info: '',
+      img: '',
+      songs: [
+        {
+          name: '',
+          author: '',
+          listenings: 0
+        }
+      ]
+    };
+
+  constructor(private _album: AlbumService) { }
 
   ngOnInit() {
     this.name = localStorage.getItem('name');
-    localStorage.removeItem('name');
+    // localStorage.removeItem('name');
   }
-
 }

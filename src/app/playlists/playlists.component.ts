@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {AlbumService} from "../services/album.service";
 
 @Component({
   selector: 'app-playlists',
@@ -10,26 +11,34 @@ export class PlaylistsComponent implements OnInit {
 
   albums = [
     {
-      name: "T-Fest молодость.",
-      img: "../../assets/img/songs/song-1.jpg",
-    },
-    {
-      name: "Some name should be here.",
-      img: "../../assets/img/songs/song-2.jpg",
-    },
-    {
-      name: "Казка - Плакала та інші.",
-      img: "../../assets/img/songs/song-3.jpg",
-    },
-    {
-      name: "Макс Корж альбом.",
-      img: "../../assets/img/songs/song-4.jpg",
-    },
-  ]
+      name: '',
+      author: '',
+      info: '',
+      img: '',
+      songs: [
+        {
+          name: '',
+          author: '',
+          listenings: 0
+        }
+      ]
+    }
+  ];
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,
+              private _album: AlbumService) { }
 
   ngOnInit() {
+    this._album.getAlbums()
+      .subscribe(
+        res => {
+          console.log(res);
+          this.albums = res;
+        },
+        err => {
+          console.log(err);
+        }
+      );
   }
 
   getAlbum(name) {
