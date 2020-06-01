@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PlaylistsComponent } from './playlists/playlists.component';
 import { PlaylistInfoComponent } from './playlist-info/playlist-info.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PlaylistInfoComponent } from './playlist-info/playlist-info.component';
     HeaderComponent,
     HomeComponent,
     PlaylistsComponent,
-    PlaylistInfoComponent
+    PlaylistInfoComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

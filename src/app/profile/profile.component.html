@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row-content">
+    <!----------------- User info ----------------->
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4">
+        <!----------- User info card ----------->
+        <div class="card">
+          <img src="assets/img/user.png" class="card-img-top" alt="user">
+          <div class="card-body">
+            <h5 class="card-title text-center">Username here</h5>
+            <div class="row">
+              <div class="col col-sm">
+                <p>Name</p>
+                <p>Surname</p>
+                <p>Age</p>
+              </div>
+              <!------------ Replaced data ------------>
+              <div class="col col-sm">
+                <p>Name</p>
+                <p>Surname</p>
+                <p>Age</p>
+              </div>
+            </div>
+            <button type="button" class="btn btn-success btn-block" (click)="toggle()">Change data</button>
+          </div>
+        </div>
+
+        <!----------- User update info ----------->
+        <form *ngIf="hide" class="mt-4 mt-sm-0">
+          <!--------- New Email --------->
+          <div class="form-group row">
+            <label for="newMail" class="col-3 col-sm-12 col-form-label">New Email</label>
+            <div class="col-9 col-sm-12">
+              <input type="email" class="form-control" id="newMail">
+            </div>
+          </div>
+          <!--------- New Name --------->
+          <div class="form-group row">
+            <label for="newName" class="col-3 col-sm-12 col-form-label">New Name</label>
+            <div class="col-9 col-sm-12">
+              <input type="email" class="form-control" id="newName">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!----------------- Albums list ----------------->
+      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0">
+        <div class="col text-center">
+          <h2>Your subscriptions</h2>
+        </div>
+        <div class="media">
+          <img src="assets/img/song.png" class="mr-3" alt="img" height="100" width="100">
+          <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            And some text could be here
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

@@ -24,7 +24,7 @@
 -->
 
 <!-- ------------------------------ Nav-bar ------------------------------ -->
-<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+<nav class="navbar navbar-dark navbar-expand-md fixed-top">
   <a class="navbar-brand" routerLink="">MyTopMusic</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,19 +36,14 @@
       <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
       <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a></li>
       <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" routerLink="/playlists" routerLinkActive="active">Playlists</a></li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" routerLink="/special" routerLinkActive="active">My playlists</a></li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" routerLink="/special" routerLinkActive="active">My events</a></li>
     </ul>
     <!-- -------------------- Nav-right-items -------------------- -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Log In</a>
-      </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</a>
-      </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Log Out</a>
-      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" *ngIf="_authService.loggedIn()" routerLink="/profile">Profile</a></li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Log In</a></li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</a></li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Log Out</a></li>
     </ul>
   </div>
 </nav>

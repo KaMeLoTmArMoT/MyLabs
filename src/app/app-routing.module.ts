@@ -8,6 +8,7 @@ import {AuthGuard} from "./auth.guard";
 import {HomeComponent} from "./home/home.component";
 import {PlaylistsComponent} from "./playlists/playlists.component";
 import {PlaylistInfoComponent} from "./playlist-info/playlist-info.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'playlist-info',
     component: PlaylistInfoComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
   }
 ];
 
