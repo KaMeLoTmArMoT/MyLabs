@@ -8,9 +8,10 @@ import {AlbumService} from "../services/album.service";
 })
 export class PlaylistInfoComponent implements OnInit {
 
-  name = '';
-
-  album = {
+  albumData = {
+    name: ''
+  }
+  album: {
       name: '',
       author: '',
       info: '',
@@ -23,11 +24,22 @@ export class PlaylistInfoComponent implements OnInit {
         }
       ]
     };
+  nums: any;
 
   constructor(private _album: AlbumService) { }
 
   ngOnInit() {
-    this.name = localStorage.getItem('name');
-    // localStorage.removeItem('name');
+    this.albumData.name = localStorage.getItem('name');
+
+    this._album.getAlbum(this.albumData)
+      .subscribe(
+        res => {
+          this.album = res.album;
+          this.nums = Array.from(Array(this.album.songs.length).keys());
+        },
+        err => {
+          console.log(err)
+        }
+      );
   }
 }
