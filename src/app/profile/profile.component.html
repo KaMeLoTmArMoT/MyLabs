@@ -41,25 +41,23 @@
               <input type="email" class="form-control" id="newName">
             </div>
           </div>
+          <button type="button" class="btn btn-primary btn-block" (click)="toggle()">Apply</button>
         </form>
       </div>
 
       <!----------------- Albums list ----------------->
-      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0">
+      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0" *ngIf="albums.length > 0">
         <div class="col text-center">
           <h2>Your subscriptions</h2>
         </div>
-        <div class="media">
-          <img src="assets/img/song.png" class="mr-3" alt="img" height="100" width="100">
+        <div class="media mt-3" *ngFor="let album of albums">
+          <img src="{{album.img}}" class="mr-3" alt="img" height="100" width="100">
           <div class="media-body">
-            <h5 class="mt-0">Media heading</h5>
-            And some text could be here
+            <h5 class="mt-0">{{album.name}}</h5>
+            {{album.info}}
           </div>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>
