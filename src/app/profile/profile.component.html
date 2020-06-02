@@ -2,23 +2,25 @@
   <div class="row-content">
     <!----------------- User info ----------------->
     <div class="row">
-      <div class="col-12 col-sm-6 col-md-4">
+      <div class="col-12 col-sm-7 col-md-5">
         <!----------- User info card ----------->
         <div class="card">
           <img src="assets/img/user.png" class="card-img-top" alt="user">
           <div class="card-body">
             <h5 class="card-title text-center">Username here</h5>
             <div class="row">
-              <div class="col col-sm">
-                <p>Name</p>
-                <p>Surname</p>
-                <p>Age</p>
+              <div class="col col-4">
+                <p class="text-truncate">Email:</p>
+                <p class="text-truncate" data-toggle="tooltip" data-placement="top" title="Password">Password:</p>
               </div>
               <!------------ Replaced data ------------>
-              <div class="col col-sm">
-                <p>Name</p>
-                <p>Surname</p>
-                <p>Age</p>
+              <div class="col col-8">
+                <p class="text-truncate" data-toggle="tooltip" data-placement="top" title="{{userData.email}}">
+                  {{userData.email}}
+                </p>
+                <p class="text-truncate" data-toggle="tooltip" data-placement="top" title="{{userData.password}}">
+                  {{userData.password}}
+                </p>
               </div>
             </div>
             <button type="button" class="btn btn-success btn-block" (click)="toggle()">Change data</button>
@@ -31,17 +33,18 @@
           <div class="form-group row">
             <label for="newMail" class="col-3 col-sm-12 col-form-label">New Email</label>
             <div class="col-9 col-sm-12">
-              <input type="email" class="form-control" id="newMail">
+              <input [(ngModel)]="updateData.email" type="email" name="email" class="form-control" id="newMail" required>
             </div>
           </div>
           <!--------- New Password --------->
           <div class="form-group row">
             <label for="newName" class="col-3 col-sm-12 col-form-label">New Password</label>
             <div class="col-9 col-sm-12">
-              <input type="email" class="form-control" id="newName">
+              <input [(ngModel)]="updateData.password" type="password" name="password" class="form-control" id="newName" required>
             </div>
           </div>
-          <button type="button" class="btn btn-primary btn-block" (click)="toggle()">Apply</button>
+          <!--------- Buttons --------->
+          <button type="button" class="btn btn-primary btn-block" (click)="updateUserData()">Apply</button>
           <div class="row mt-2">
             <div class="col-12 text-center" *ngIf="!delete">
               <h6 class="delete" (click)="deleteAlert()">Delete account</h6>
@@ -54,7 +57,7 @@
       </div>
 
       <!----------------- Albums list ----------------->
-      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0">
+      <div class="col-12 col-sm-4 col-md-6 offset-sm-1 mt-4 mt-sm-0">
         <div class="col text-center">
           <h2>Your subscriptions</h2>
         </div>

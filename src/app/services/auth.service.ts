@@ -10,6 +10,8 @@ export class AuthService {
   private _registerUrl = "http://localhost:3000/api/register";
   private _loginUrl = "http://localhost:3000/api/login";
   private _deleteUrl = "http://localhost:3000/api/delete";
+  private _loadDataUrl = "http://localhost:3000/api/getUserData";
+  private _updateDataUrl = "http://localhost:3000/api/updateUserData";
   constructor(private http: HttpClient,
               private _router: Router) { }
 
@@ -23,6 +25,14 @@ export class AuthService {
 
   deleteUser(user) {
     return this.http.post<any>(this._deleteUrl, user);
+  }
+
+  loadUserData(user) {
+    return this.http.post<any>(this._loadDataUrl, user);
+  }
+
+  updateUserData(user) {
+    return this.http.post<any>(this._updateDataUrl, user);
   }
 
   loggedIn() {

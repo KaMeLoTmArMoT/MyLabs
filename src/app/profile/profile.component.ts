@@ -13,18 +13,33 @@ export class ProfileComponent implements OnInit {
   data = {
     id: ''
   }
+  data_id = {
+    id: '',
+    token: ''
+  }
   albId = {
     id: ''
   }
   albums = []
   hide = false;
   delete = false;
+  userData = {
+    email: '',
+    password: ''
+  }
+  updateData = {
+    id: '',
+    token: '',
+    password: '',
+    email: ''
+  }
   constructor(private _album: AlbumService,
               private _router: Router,
               private _auth: AuthService) { }
 
   ngOnInit() {
     this.loadSubscribedAlbums();
+    this.loadUserData();
   }
 
   toggle() {
@@ -53,8 +68,38 @@ export class ProfileComponent implements OnInit {
           console.log(err)
         }
       )
+  }
 
-    console.log(this.albums);
+  loadUserData() {
+    this.data_id.id = localStorage.getItem('id');
+    this.data_id.token = localStorage.getItem('token');
+
+    this._auth.loadUserData(this.data_id)
+      .subscribe(
+        res => {
+          this.userData = res
+        },
+        err => {
+          console.log(err)
+        }
+      );
+  }
+
+  updateUserData() {
+    this.updateData.id = localStorage.getItem('id');
+    this.updateData.token = localStorage.getItem('token');
+
+    this._auth.updateUserData(this.updateData)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => {
+          console.log(err)
+        }
+      );
+
+    window.location.reload();
   }
 
   deleteAlert() {
