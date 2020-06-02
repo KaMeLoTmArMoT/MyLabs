@@ -26,7 +26,7 @@
         </div>
 
         <!----------- User update info ----------->
-        <form *ngIf="hide" class="mt-4 mt-sm-0">
+        <form *ngIf="hide" class="mt-4 mt-sm-1 border p-1">
           <!--------- New Email --------->
           <div class="form-group row">
             <label for="newMail" class="col-3 col-sm-12 col-form-label">New Email</label>
@@ -34,27 +34,46 @@
               <input type="email" class="form-control" id="newMail">
             </div>
           </div>
-          <!--------- New Name --------->
+          <!--------- New Password --------->
           <div class="form-group row">
-            <label for="newName" class="col-3 col-sm-12 col-form-label">New Name</label>
+            <label for="newName" class="col-3 col-sm-12 col-form-label">New Password</label>
             <div class="col-9 col-sm-12">
               <input type="email" class="form-control" id="newName">
             </div>
           </div>
           <button type="button" class="btn btn-primary btn-block" (click)="toggle()">Apply</button>
+          <div class="row mt-2">
+            <div class="col-12 text-center" *ngIf="!delete">
+              <h6 class="delete" (click)="deleteAlert()">Delete account</h6>
+            </div>
+            <div class="col-12 text-center" *ngIf="delete">
+              <h6 class="delete" (click)="deleteAcc()">Click again to confirm.</h6>
+            </div>
+          </div>
         </form>
       </div>
 
       <!----------------- Albums list ----------------->
-      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0" *ngIf="albums.length > 0">
+      <div class="col-12 col-sm-5 col-md-7 offset-sm-1 mt-4 mt-sm-0">
         <div class="col text-center">
           <h2>Your subscriptions</h2>
         </div>
-        <div class="media mt-3" *ngFor="let album of albums">
-          <img src="{{album.img}}" class="mr-3" alt="img" height="100" width="100">
-          <div class="media-body">
-            <h5 class="mt-0">{{album.name}}</h5>
-            {{album.info}}
+        <!------------- Subscriptions ------------->
+        <div *ngIf="albums.length > 0">
+          <div class="media mt-3" *ngFor="let album of albums">
+            <img src="{{album.img}}" class="mr-3" alt="img" height="100" width="100">
+            <div class="media-body">
+              <h5 class="mt-0">{{album.name}}</h5>
+              {{album.info}}
+            </div>
+          </div>
+        </div>
+        <!------------- No subscriptions ------------->
+        <div *ngIf="albums.length == 0">
+          <div class="col text-center">
+            <h4>You have no subscriptions yet!
+              <a routerLink="/playlists" class="sub">Click here to get some!</a>
+            </h4>
           </div>
         </div>
       </div>

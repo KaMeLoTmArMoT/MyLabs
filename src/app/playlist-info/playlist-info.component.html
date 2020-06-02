@@ -10,14 +10,20 @@
           <p class="card-text">{{album.info}}</p>
           <div class="row">
             <div class="col">
-              <a href="#" class="btn btn-success btn-block">Like</a>
+              <a class="btn btn-success btn-block" (click)="like()">Like</a>
             </div>
             <div class="col" *ngIf="_auth.loggedIn()">
               <a class="btn btn-primary btn-block" (click)="subscribe(album._id)">Subscribe</a>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-danger btn-block">Dislike</a>
+              <a class="btn btn-danger btn-block" (click)="dislike()">Dislike</a>
             </div>
+          </div>
+          <div class="alert alert-danger mt-3" role="alert" *ngIf="err">
+            {{err}}
+          </div>
+          <div class="alert alert-success mt-3" role="alert" *ngIf="success">
+            {{success}}
           </div>
         </div>
       </div>

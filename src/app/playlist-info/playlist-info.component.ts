@@ -31,6 +31,8 @@ export class PlaylistInfoComponent implements OnInit {
     token: '',
     albId: ''
   }
+  err: '';
+  success: string;
 
   constructor(private _album: AlbumService,
               private _auth: AuthService) { }
@@ -55,16 +57,30 @@ export class PlaylistInfoComponent implements OnInit {
     this.subscribeData.token = localStorage.getItem('token');
     this.subscribeData.albId = albName;
 
-    // Create or use existing service
-    console.log(this.subscribeData);
     this._album.subscribeToAlbum(this.subscribeData)
       .subscribe(
         res => {
-          console.log(res);
+          console.log('sucess');
+          this.success = 'Successfully subscribed!';
         },
         err => {
-          console.log(err);
+          console.log(err.error);
+          console.log('error');
+
+          if (err.error === 'Already subscribed!') {
+            this.err = err.error;
+          } else {
+            this.success = 'Successfully subscribed!';
+          }
         }
       );
+  }
+
+  like() {
+    alert('Coming soon!')
+  }
+
+  dislike() {
+    alert('Coming soon!')
   }
 }

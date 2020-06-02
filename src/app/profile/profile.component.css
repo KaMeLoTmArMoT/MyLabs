@@ -3,3 +3,12 @@
   border-radius: 12px;
   cursor: pointer;
 }
+
+.delete {
+  cursor: pointer;
+  color: red;
+}
+
+.delete:hover {
+  text-decoration: underline;
+}

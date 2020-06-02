@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AlbumService} from "../services/album.service";
+import {Router} from "@angular/router";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +18,10 @@ export class ProfileComponent implements OnInit {
   }
   albums = []
   hide = false;
-  constructor(private _album: AlbumService) { }
+  delete = false;
+  constructor(private _album: AlbumService,
+              private _router: Router,
+              private _auth: AuthService) { }
 
   ngOnInit() {
     this.loadSubscribedAlbums();
@@ -50,5 +55,25 @@ export class ProfileComponent implements OnInit {
       )
 
     console.log(this.albums);
+  }
+
+  deleteAlert() {
+    this.delete = true;
+  }
+
+  deleteAcc() {
+    this.data.id = localStorage.getItem('id');
+
+    this._auth.deleteUser(this.data)
+      .subscribe(
+        res => {
+          console.log(res.text)
+          this._auth.logoutUser();
+        },
+          err => {
+          console.log(err)
+        }
+      )
+    //this._router.navigate(['/home'])
   }
 }
