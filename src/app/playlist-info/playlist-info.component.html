@@ -12,8 +12,8 @@
             <div class="col">
               <a href="#" class="btn btn-success btn-block">Like</a>
             </div>
-            <div class="col">
-              <a href="#" class="btn btn-primary btn-block">Subscribe</a>
+            <div class="col" *ngIf="_auth.loggedIn()">
+              <a class="btn btn-primary btn-block" (click)="subscribe(album._id)">Subscribe</a>
             </div>
             <div class="col">
               <a href="#" class="btn btn-danger btn-block">Dislike</a>
