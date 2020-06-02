@@ -33,6 +33,11 @@ export class ProfileComponent implements OnInit {
     password: '',
     email: ''
   }
+  unsubscribe = {
+    id: '',
+    albId: '',
+    token: ''
+  }
   constructor(private _album: AlbumService,
               private _router: Router,
               private _auth: AuthService) { }
@@ -120,5 +125,23 @@ export class ProfileComponent implements OnInit {
         }
       )
     //this._router.navigate(['/home'])
+  }
+
+  unSubscribe(albId) {
+    this.unsubscribe.id = localStorage.getItem('id')
+    this.unsubscribe.albId = albId
+    this.unsubscribe.token = localStorage.getItem('token')
+
+    this._album.unsubscribeAlbum(this.unsubscribe)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => {
+          console.log(err)
+        }
+      )
+
+    window.location.reload()
   }
 }

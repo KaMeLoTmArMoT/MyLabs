@@ -11,6 +11,7 @@ export class AlbumService {
   private _getAlbumIdUrl = "http://localhost:3000/api/albumId";
   private _postAlbumUrl = "http://localhost:3000/api/addAlbum";
   private _updateSubscription = "http://localhost:3000/api/subscribe";
+  private _cancelSubscription = "http://localhost:3000/api/unsubscribe";
   private _getUserAlbumsUrl = "http://localhost:3000/api/userAlbums";
   constructor(private http: HttpClient) { }
 
@@ -32,6 +33,10 @@ export class AlbumService {
 
   subscribeToAlbum(data) {
     return this.http.post(this._updateSubscription, data)
+  }
+
+  unsubscribeAlbum(data) {
+    return this.http.post(this._cancelSubscription, data)
   }
 
   getUserAlbums(data) {

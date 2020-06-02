@@ -1,6 +1,13 @@
-.media:hover {
+* {
+  border-radius: 10px;
+}
+
+.media {
   border: 1px solid #ccc;
-  border-radius: 12px;
+}
+
+.media:hover {
+  border: 1px solid #0f0;
   cursor: pointer;
 }
 
@@ -11,4 +18,12 @@
 
 .delete:hover {
   text-decoration: underline;
+}
+
+.colored {
+  color: #FF0000;
+}
+
+.colored:hover {
+  color: #AA0000;
 }

@@ -57,17 +57,18 @@
       </div>
 
       <!----------------- Albums list ----------------->
-      <div class="col-12 col-sm-4 col-md-6 offset-sm-1 mt-4 mt-sm-0">
+      <div class="col-12 col-sm-5 col-md-7 mt-4 mt-sm-0">
         <div class="col text-center">
           <h2>Your subscriptions</h2>
         </div>
         <!------------- Subscriptions ------------->
         <div *ngIf="albums.length > 0">
           <div class="media mt-3" *ngFor="let album of albums">
-            <img src="{{album.img}}" class="mr-3" alt="img" height="100" width="100">
+            <img src="{{album.img}}" class="align-self-center mr-3" alt="img" height="100" width="100">
             <div class="media-body">
               <h5 class="mt-0">{{album.name}}</h5>
               {{album.info}}
+              <a class="colored" (click)="unSubscribe(album._id)">Unsubscribe</a>
             </div>
           </div>
         </div>

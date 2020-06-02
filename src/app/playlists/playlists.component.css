@@ -1,0 +1,13 @@
+img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.gallery {
+  border-radius: 15px;
+}
+
+.desc {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

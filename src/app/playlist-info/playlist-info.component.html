@@ -2,7 +2,7 @@
 <div class="container">
   <!--------------------- Header ------------------->
   <div class="row row-content" *ngIf="album">
-    <div class="col-12 col-md-10 offset-md-1">
+    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
       <div class="card">
         <img src="../../assets/img/song.png" class="card-img-top" alt="s">
         <div class="card-body">
@@ -19,10 +19,10 @@
               <a class="btn btn-danger btn-block" (click)="dislike()">Dislike</a>
             </div>
           </div>
-          <div class="alert alert-danger mt-3" role="alert" *ngIf="err">
+          <div class="alert alert-danger mt-3 text-center" role="alert" *ngIf="err">
             {{err}}
           </div>
-          <div class="alert alert-success mt-3" role="alert" *ngIf="success">
+          <div class="alert alert-success mt-3 text-center" role="alert" *ngIf="success">
             {{success}}
           </div>
         </div>
