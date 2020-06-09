@@ -1,4 +1,4 @@
 #Go and check it:
 #https://kamelotmarmot.github.io/MyLabs/
 
-Static pages layout.
+Npm, linter, dynamic data from server (AJAX).
